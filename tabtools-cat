@@ -1,0 +1,7 @@
+#!/bin/sh
+# Concatenate files that are tab-delimited with a header
+
+set -eu
+
+head -n1 $1
+exec tail -qn+2 "$@"
